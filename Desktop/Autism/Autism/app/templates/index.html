@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autism Detection</title>
+    <link rel="stylesheet" href="./static/styles.css">
+</head>
+
+<body>
+    <h2>Autism Detection Form</h2>
+    <form action="/predict" method="post">
+        <label for="user_type">Select Type:</label>
+        <select name="user_type">
+            <option value="adult">Adult</option>
+            <option value="child">Child</option>
+        </select>
+
+        <label>Age:</label>
+        <input type="number" name="age" required><br>
+
+        <label>Gender (0=Female, 1=Male):</label>
+        <input type="number" name="gender" required><br>
+
+        <label>Jaundice (0=No, 1=Yes):</label>
+        <input type="number" name="jaundice" required><br>
+
+        <label>Family History of Autism (0=No, 1=Yes):</label>
+        <input type="number" name="family_asd" required><br>
+
+        <h3>Answer the following questions (0=No, 1=Yes):</h3>
+        <input type="number" name="q1" required placeholder="Does your child loot at you when you call his/her name?"><br>
+        <input type="number" name="q2" required placeholder="How easy is it for you to get eye contact with your child?"><br>
+        <input type="number" name="q3" required placeholder="Does your child point to indicate that she/he wants something?"><br>
+        <input type="number" name="q4" required placeholder="Does your child point to share intrest with you?"" ><br>
+        <input type="number" name="q5" required placeholder="Does your child pretend?"><br>
+        <input type="number" name="q6" required placeholder="Does your child follow where you're looking"><br>
+        <input type="number" name="q7" required placeholder="Does your child use simple gestures?"><br>
+        <input type="number" name="q8" required placeholder="Does your child stare at nothing with no apparent purpose?"><br>
+        <input type="number" name="q9" required placeholder="If you or someone else in family is visibly upset,does your child show signs of warning to comfort them?"><br>
+        <input type="number" name="q10" required placeholder="Would you describe your child's first words as?"><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+
+</html>
